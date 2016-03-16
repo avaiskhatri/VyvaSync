@@ -15,13 +15,14 @@ body {
 
 .header {
 	background: url('../img/logo.png') no-repeat center;
-    -webkit-background-size: 90% auto;
-    -moz-background-size: 90% auto;
-    -ms-background-size: 90% auto;
-    -o-background-size: 90% auto;
-    background-size: 90% auto;
-    height: 60px;
-    line-height: 60px;
+    -webkit-background-size: 95% auto;
+    -moz-background-size: 95% auto;
+    -ms-background-size: 95% auto;
+    -o-background-size: 95% auto;
+    background-size: 95% auto;
+    min-height: 70px;
+    %line-height: auto;
+	display:block;
     width: 100%;
     color: #fff;
 	padding:5px 0px;
