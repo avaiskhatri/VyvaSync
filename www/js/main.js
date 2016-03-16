@@ -12,6 +12,9 @@ var app = {
 	showDashboard: function(){
 		$('.dynamic-body').html(this.dashboardTpl());
 	},
+	showSetting: function(){
+		$('.dynamic-body').html(this.settingTpl());
+	},
 	renderHomeView: function() {
 		$('.dynamic-body').html(this.loginTpl());
 	},
@@ -35,7 +38,9 @@ var app = {
 		});
         this.loginTpl = Handlebars.compile($("#login-tpl").html());
         this.dashboardTpl = Handlebars.compile($("#dashboard-tpl").html());
+        this.settingTpl = Handlebars.compile($("#setting-tpl").html());
 		$('#show-dashboard').on('click', $.proxy(this.showDashboard, this));
+		$('#show-setting').on('click', $.proxy(this.showSetting, this));
 		$('#show-login').on('click', $.proxy(this.renderHomeView, this));
 		//$('.search-key').on('keyup', $.proxy(this.findByName, this));
         //$('.login-view-btn').on('click', $.proxy(this.showLogin, this));

@@ -29,7 +29,6 @@
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
 		<link rel="stylesheet" type="text/css" href="spec/lib/onsen/css/onsenui.css" />
         <link rel="stylesheet" type="text/css" href="spec/lib/onsen/css/onsen-css-components-blue-basic-theme.css" />
-		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/reset.css" />
 		<link rel="stylesheet" type="text/css" href="css/styles.css" />
 		<link rel="stylesheet" type="text/css" href="css/app.css" />
@@ -41,13 +40,21 @@
     <body>
 		<div class='header'></div>
 		<script id="login-tpl" type="text/x-handlebars-template">
-			<div class="login-form">
+			<div class="login-form input-form">
 				<input type="email" class="text-input--underbar" placeholder="Email" value="">
 				<input type="password" class="text-input--underbar" placeholder="Password" value="">
 				<br><br>
 				<button class="button login-button">Log In</button>
 				<br><br>
 				<button class="button forgotpassword-button">Forgot Password</button>
+			  </div>
+		</script>
+		<script id="setting-tpl" type="text/x-handlebars-template">
+			<div class="setting-form input-form">
+				<input type="password" class="text-input--underbar" placeholder="Confirm Password" value="">
+				<input type="password" class="text-input--underbar" placeholder="Re Type Password" value="">
+				<br><br>
+				<button class="button login-button">Update Password</button>
 			  </div>
 		</script>
 		<script id="dashboard-tpl" type="text/x-handlebars-template">
@@ -97,7 +104,7 @@
 					<div class="tab-bar__label">Notification</div>
 				</button>
 			</label>
-			<label class="tab-bar__item">
+			<label class="tab-bar__item" id="show-setting">
 				<input type="radio" name="tab-bar-a" checked="checked">
 				<button class="tab-bar__button">
 					<i class="tab-bar__icon ion-gear-a"></i>

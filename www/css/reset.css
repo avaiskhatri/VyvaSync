@@ -51,7 +51,7 @@ table {
 ----------------------------------------------------------------------*/
 body {
 	margin: 0 auto;
-	background: #ddd url('../images/backgrounds/6.jpg') fixed;
+	background: #ddd;
 	color: #7A7A7A;
 	line-height: 24px;
 	font-family: "Roboto", Helvetica, Tahoma, Arial;
