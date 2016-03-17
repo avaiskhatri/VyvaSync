@@ -144,46 +144,6 @@ li>a * {
     pointer-events: none;
 }
 
-.button {
-	-moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	-webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
-	box-shadow:inset 0px 1px 0px 0px #ffffff;
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-	background-color:#ededed;
-	-moz-border-radius:2px;
-	-webkit-border-radius:2px;
-	border-radius:2px;
-	border:1px solid #dcdcdc;
-	display:inline-block;
-	color:#666666;
-	font-size:14px;
-	text-decoration:none;
-	text-shadow:1px 1px 0px #ffffff;
-}
-
-.button:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
-	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-	background-color:#dfdfdf;
-
-}
-
-h1 {
-    font-size: 18px;
-    padding: 20 0 0 0;
-    margin: 0px;
-}
-
-h2 {
-    font-size: 16px;
-    font-weight: normal;
-    padding: 0px;
-    margin: 0px;
-}
-
 .employee-image {
     float:left;
     margin:10px;
@@ -199,29 +159,19 @@ h2 {
   position: relative;
   display: inline-block;
   vertical-align: top;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  padding: 0;
-  margin: 0;
-  font: inherit;
+  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+  -webkit-background-clip: padding-box; background-clip: padding-box;
+  background: transparent; background-color: rgba(24,103,194,0.81);
+  padding: 0; margin: 0;
+  font: inherit; text-overflow: ellipsis;
   color: inherit;
-  background: transparent;
   border: none;
   line-height: normal;
-  font-family: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-weight: 400;
-  font-size: 17px;
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+  
   cursor: default;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  text-overflow: ellipsis;
+  -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+  
   white-space: nowrap;
   overflow: hidden;
   height: auto;
@@ -232,14 +182,8 @@ h2 {
   letter-spacing: 0;
   color: #fff;
   vertical-align: middle;
-  background-color: rgba(24,103,194,0.81);
-  border: 0px solid currentColor;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  -webkit-transition: none;
-  -moz-transition: none;
-  -o-transition: none;
-  transition: none;
+  border: 0px solid currentColor; -webkit-border-radius: 3px; border-radius: 3px;
+  -webkit-transition: none; -moz-transition: none; -o-transition: none; transition: none;
 }
 .button:hover {
   -webkit-transition: none;
@@ -248,7 +192,6 @@ h2 {
   transition: none;
 }
 .button:active {
-  background-color: rgba(24,103,194,0.81);
   -webkit-transition: none;
   -moz-transition: none;
   -o-transition: none;
