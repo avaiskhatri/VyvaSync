@@ -9,10 +9,12 @@
 
 .btn-sidebar { border: 2px solid #7f8c8d; background: none; color: #7f8c8d; }
 .btn-sidebar:hover { background: #7f8c8d; color:#FFF; border: 2px solid #7f8c8d; }
-.btn-inverse:focus { background:#1ABC9C !important; }
-.btn-circle { width: 30px; height: 30px; text-align: center; padding: 6px 0; font-size: 12px; line-height: 1.428571429; border-radius: 15px; }
+.btn-circle { width: 30px; height: 30px; text-align: center; padding: 6px 0; font-size: 12px; line-height: 1.428571429; border-radius: 15px; border:0px;}
+
 .btn-circle.btn-lg { width: 50px; height: 50px; padding: 10px 16px; font-size: 18px; line-height: 1.33; border-radius: 25px; }
 .btn-circle.btn-xl { width: 70px; height: 70px; padding: 10px 16px; font-size: 24px; line-height: 1.33; border-radius: 35px; }
+.btn-inverse:focus,.btn-circle:hover { background:#1ABC9C !important; }
+
 .btn-signout { cursor: pointer; }
 
 .taggedteam { background-color:#c0d6f0; margin-left:2%; padding: 0.5%; border-radius: 5px; float:left; min-width: 25%; top: 10%; margin-top:1.5%; }
@@ -32,7 +34,7 @@
 .project-details .project-meta { font-weight: bold; }
 .project-details div { margin-bottom: 5px; }
 .profile-box { margin: 0 5% 5% 5%; #background-color:  rgba(236, 240, 241, 1.0); background-color:#FFFFFF; border: 1px solid #e1e1e8; border-radius: 6px; box-shadow: 0 8px 17px 0 rgba(236, 240, 241, 0.2); }
-.project-role { text-align: center; padding: 2px 3px; color: #fff; font-size: 14px; border-radius: 6px; -moz-border-radius:6px; -webkit-border-radius:6px; }
+.project-role { text-align: center; padding: 5px 3px; color: #fff; font-size: 14px; border-radius: 6px; -moz-border-radius:6px; -webkit-border-radius:6px; }
 
 .shots-meta { font-size: 14px; margin-bottom: 0; }
 .shots-meta-custom { margin-bottom: 10px !important; }
