@@ -12,6 +12,9 @@ var app = {
 	showDashboard: function(){
 		$('.dynamic-body').html(this.dashboardTpl());
 	},
+	showScenes: function(){
+		$('.dynamic-body').html(this.sceneTpl());
+	},
 	showSetting: function(){
 		$('.dynamic-body').html(this.settingTpl());
 	},
@@ -38,8 +41,10 @@ var app = {
 		});
         this.loginTpl = Handlebars.compile($("#login-tpl").html());
         this.dashboardTpl = Handlebars.compile($("#dashboard-tpl").html());
+        this.sceneTpl = Handlebars.compile($("#scenes-tpl").html());
         this.settingTpl = Handlebars.compile($("#setting-tpl").html());
 		$('#show-dashboard').on('click', $.proxy(this.showDashboard, this));
+		$('#show-scenes').on('click', $.proxy(this.showScenes, this));
 		$('#show-setting').on('click', $.proxy(this.showSetting, this));
 		$('#show-login').on('click', $.proxy(this.renderHomeView, this));
 		//$('.search-key').on('keyup', $.proxy(this.findByName, this));

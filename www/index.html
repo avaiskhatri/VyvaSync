@@ -42,6 +42,7 @@
     </head>
     <body>
 		<div class='header'></div>
+		<div class="dynamic-body"></div>
 		<script id="login-tpl" type="text/x-handlebars-template">
 			<div class="login-form input-form">
 				<input type="email" class="text-input--underbar" placeholder="Email" value="">
@@ -50,14 +51,6 @@
 				<button class="button login-button">Log In</button>
 				<br><br>
 				<button class="button forgotpassword-button">Forgot Password</button>
-			  </div>
-		</script>
-		<script id="setting-tpl" type="text/x-handlebars-template">
-			<div class="setting-form input-form">
-				<input type="password" class="text-input--underbar" placeholder="Confirm Password" value="">
-				<input type="password" class="text-input--underbar" placeholder="Re Type Password" value="">
-				<br>
-				<button class="button login-button">Update Password</button>
 			  </div>
 		</script>
 		<script id="dashboard-tpl" type="text/x-handlebars-template">
@@ -89,7 +82,62 @@
 				
 			  </div>
 		</script>
-		<div class="dynamic-body"></div>
+		<script id="scenes-tpl" type="text/x-handlebars-template">
+			<div class="scenes-form">
+				<div class="row">
+					<div class="col-xs-12 col-sm-12  scene-details"><!-- For Small Screen Buttons -->
+						<h5 class="text-center"><span id="project_name_small">ZabRank</span></h5>
+						<h6 class="text-center"><i class="fa fa-calendar"></i> <span id="date_small">03/17/2016</span></h6>
+						<h6 class="text-center project-description-small"><span id="project_description_small">Introductory video </span></h6>
+						<h6 class="text-center">
+							<a href=""><button class="btn btn-primary btn-circle btn-lg" data-toggle="tooltip" title="Add a scene"><i class="fa fa-plus"></i></button></a>
+							<button id="btn_completed_scenes" onclick="" class="btn btn-inverse btn-circle btn-lg" title="Completed scenes"><i class="fa fa-check"></i></button>
+							<button id="btn_todays_scenes" onclick="" class="btn btn-inverse btn-circle btn-lg" title=" Today's scenes"><i class="fa fa-calendar"></i></button>
+							<button id="btn_all_scenes" onclick="" class="btn btn-inverse btn-circle btn-lg"  title="All scenes"><i class="fa fa-th-list"></i></button>
+							<a href="crew.php?project_id=23"><button class="btn btn-inverse btn-circle btn-lg" title="Project members"><i class="fa fa-group"></i></button></a>
+							<button onclick="generate_call_sheet('23')" class="btn btn-inverse btn-circle btn-lg" title="Send Call Sheet"><i class="fa fa-phone"></i></button>
+						</h6>
+						<hr>
+					</div>
+					
+				</div>
+				<div class="scenes" id="scenes" style="display: block;">	
+					<div class="col-xs-12">	
+						<div class="col-md-12 col-sm-12 col-xs-12 scene-box">	
+							<div class="col-md-12 col-sm-12 col-xs-12">			
+								<img src="img/chat_coming_soon.png" class="img-responsive scene-height-custom">				
+							</div>
+							<div class="col-md-12 col-sm-12 col-xs-12">						
+								<h4>Untitled scene</h4>						
+							</div>								
+							<div class="col-md-12 col-sm-12 col-xs-12">		
+								<h3>Shoot date: <span class="shots-bold">--</span></h3>						
+							</div>									
+							<div class="col-md-12 col-sm-12 col-xs-12">										
+								<h3>Total notes: <span class="shots-bold">0</span></h3>				
+							</div>					
+							<div class="col-md-12 col-sm-12 col-xs-12">		
+								<h6 class="text-center">		
+									<button onclick="" class="btn btn-success btn-circle btn-lg hidden-md hidden-lg"><i class="fa fa-check"></i></button>		
+									<button onclick="" class="btn btn-primary btn-circle btn-lg hidden-md hidden-lg"><i class="fa fa-edit"></i></button>			
+									<button onclick="" class="btn btn-disabled btn-circle btn-lg hidden-md hidden-lg"><i class="fa fa-times"></i></button>				
+								</h6>					
+							</div>
+						</div>						
+					</div>
+				</div>
+				
+			  </div>
+		</script>
+		<script id="setting-tpl" type="text/x-handlebars-template">
+			<div class="setting-form input-form">
+				<input type="password" class="text-input--underbar" placeholder="Confirm Password" value="">
+				<input type="password" class="text-input--underbar" placeholder="Re Type Password" value="">
+				<br>
+				<button class="button login-button">Update Password</button>
+			  </div>
+		</script>
+		
 		<div class="tab-bar">
 			<label class="tab-bar__item" id="show-dashboard" >
 				<input type="radio" name="tab-bar-a" checked="checked">
@@ -103,6 +151,13 @@
 				<button class="tab-bar__button">
 					<i class="tab-bar__icon ion-clock"></i>
 					<div class="tab-bar__label">Notification</div>
+				</button>
+			</label>
+			<label class="tab-bar__item" id="show-scenes">
+				<input type="radio" name="tab-bar-a" checked="checked">
+				<button class="tab-bar__button">
+					<i class="tab-bar__icon ion-ios-film-outline"></i>
+					<div class="tab-bar__label">Scenes</div>
 				</button>
 			</label>
 			<label class="tab-bar__item" id="show-setting">
